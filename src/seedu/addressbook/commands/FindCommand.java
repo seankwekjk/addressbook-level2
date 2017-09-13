@@ -24,10 +24,11 @@ public class FindCommand extends Command {
     private final Set<String> keywords;
 
     public FindCommand(Set<String> keywords) {
+        Set<String> finalKeywords=new HashSet<>();
         for(String string : keywords){
-            string.toLowerCase();
+            finalKeywords.add(string.toLowerCase());
         }
-        this.keywords = keywords;
+        this.keywords = finalKeywords;
     }
 
     /**
