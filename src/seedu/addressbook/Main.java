@@ -7,6 +7,7 @@ import java.util.Optional;
 import seedu.addressbook.commands.Command;
 import seedu.addressbook.commands.CommandResult;
 import seedu.addressbook.commands.ExitCommand;
+import seedu.addressbook.commands.IncorrectCommand;
 import seedu.addressbook.data.AddressBook;
 import seedu.addressbook.data.person.ReadOnlyPerson;
 import seedu.addressbook.parser.Parser;
@@ -87,6 +88,7 @@ public class Main {
             CommandResult result = executeCommand(command);
             recordResult(result);
             ui.showResultToUser(result);
+            command.incrementNumCommands();
 
         } while (!ExitCommand.isExit(command));
     }

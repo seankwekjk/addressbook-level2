@@ -15,6 +15,7 @@ public class Command {
     protected AddressBook addressBook;
     protected List<? extends ReadOnlyPerson> relevantPersons;
     private int targetIndex = -1;
+    private static int numCommands=0;
 
     /**
      * @param targetIndex last visible listing index of the target person
@@ -67,4 +68,8 @@ public class Command {
     public void setTargetIndex(int targetIndex) {
         this.targetIndex = targetIndex;
     }
+
+    public void incrementNumCommands(){ numCommands++; }
+
+    public static int getNumCommands(){  return numCommands;  }
 }

@@ -115,6 +115,10 @@ Examples:
 Clears all entries from the address book.<br>
 Format: `clear`  
 
+### Getting number of commands used : `num`
+Retrieves the number of commands used in the current session.<br>
+Format: `num`
+
 #### Exiting the program : `exit`
 Exits the program.<br>
 Format: `exit`  
